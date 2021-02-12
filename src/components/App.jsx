@@ -1,10 +1,27 @@
 import React from 'react';
+import Header from './Header';
+import Introduction from './Introduction';
+import Samples from './Samples';
 
-const App = () => {
+const App = (props) => {
+  const samples = [
+    {
+      title: 'AskAGuru',
+      description: 'music player',
+      tech: 'Vue, Vuex, Flask',
+    },
+  ];
   return (
     <div>
-      <h1>Hello, World!</h1>
-      <p>Welcome to my portfolio</p>
+      <div>
+        <Header />
+      </div>
+      <div>
+        <Introduction />
+      </div>
+      <div>
+        <Samples samples={samples} />
+      </div>
     </div>
   );
 };
