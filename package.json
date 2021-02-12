@@ -11,6 +11,7 @@
     "lint": "eslint ./",
     "lint-fix": "eslint ./ --fix",
     "build:dev": "webpack --watch --mode=development --devtool=eval-source-map",
+    "run:dev": "webpack serve --mode=development --devtool=eval-source-map",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
   },
   "repository": {
