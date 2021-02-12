@@ -4,11 +4,14 @@
   "description": "personal portfolio website",
   "main": "index.js",
   "scripts": {
+    "start": "npm run start:dev",
+    "start:prod": "node server/index.js",
+    "start:dev": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint ./",
     "lint-fix": "eslint ./ --fix",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "build:dev": "webpack --watch --mode=development --devtool=eval-source-map"
+    "build:dev": "webpack --watch --mode=development --devtool=eval-source-map --hot"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,8 @@
   },
   "homepage": "https://github.com/j-scola/portfolio-scola#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
@@ -40,7 +45,6 @@
     "prettier": "2.2.1",
     "react-hot-loader": "^4.13.0",
     "webpack": "^5.21.2",
-    "webpack-cli": "^4.5.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-cli": "^4.5.0"
   }
 }
