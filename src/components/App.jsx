@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div>
       <h1>Hello, World!</h1>
-      <p>Welcome to James portfolio</p>
+      <p>Welcome to my portfolio</p>
     </div>
   );
 };

@@ -8,7 +8,7 @@
     "lint": "eslint ./",
     "lint-fix": "eslint ./ --fix",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "build:dev": "webpack . --watch"
+    "build:dev": "webpack --watch --mode=development --devtool=eval-source-map"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,9 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.12.13",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-es2015": "^6.24.1",
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.2.0",
@@ -35,6 +38,9 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "2.2.1",
-    "webpack": "^5.21.2"
+    "react-hot-loader": "^4.13.0",
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
