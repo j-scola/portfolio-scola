@@ -7,15 +7,22 @@ import Samples from './Samples';
 import sampleData from '../data/workSampleData';
 
 const App = () => (
-  <div className="wrapComponents">
-    <Header />
-
-    <Introduction />
-
-    <div>email, linkedin, github</div>
-
-    <Samples samples={sampleData} />
-  </div>
+  <Router>
+    <div className="wrapComponents">
+      <Header />
+      <Switch>
+        <Route exact path="/">
+          <Introduction />
+        </Route>
+        <Route path="/contact">
+          <div>email, linkedin, github</div>
+        </Route>
+        <Route path="/workSamples">
+          <Samples samples={sampleData} />
+        </Route>
+      </Switch>
+    </div>
+  </Router>
 );
 
 export default App;

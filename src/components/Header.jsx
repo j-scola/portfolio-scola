@@ -29,7 +29,7 @@ const HorizontalListItem = styled.li`
 const Header = () => (
   <Wrap>
     <TitleBlock>
-      <TitleText>James Scolamieri</TitleText>
+      <TitleText>James Scolamieri :)</TitleText>
       <div>
         <HorizontalList>
           <HorizontalListItem>

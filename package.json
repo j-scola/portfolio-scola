@@ -9,7 +9,7 @@
     "test": "jest",
     "lint": "eslint ./",
     "lint-fix": "eslint ./ --fix",
-    "dev:build": "webpack --watch --mode=development --devtool=eval-source-map",
+    "dev:build": "webpack --watch --mode=development --devtool=eval",
     "dev:start": "nodemon server/index.js",
     "dev:server": "webpack serve --mode=development --devtool=eval-source-map",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
