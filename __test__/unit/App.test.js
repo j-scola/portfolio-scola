@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import App from '../../src/components/App';
 import sampleData from '../../src/data/workSampleData';
 
@@ -21,3 +21,14 @@ describe('Suite 1: app overview tests', () => {
     );
   });
 });
+
+describe("navigation", () => {
+
+  beforeEach(()=> render(<App />))
+
+
+
+  test('should render different components when user clicks on nav', () => {
+    fireEvent.click(getByText('Work Samples'))
+  })
+})

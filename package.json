@@ -4,14 +4,14 @@
   "description": "personal portfolio website",
   "main": "index.js",
   "scripts": {
-    "start": "npm run start:dev",
-    "start:prod": "node server/index.js",
-    "start:dev": "nodemon server/index.js",
+    "start": "npm run dev:start",
+    "prod:start": "node server/index.js",
     "test": "jest",
     "lint": "eslint ./",
     "lint-fix": "eslint ./ --fix",
-    "build:dev": "webpack --watch --mode=development --devtool=eval-source-map",
-    "run:dev": "webpack serve --mode=development --devtool=eval-source-map",
+    "dev:build": "webpack --watch --mode=development --devtool=eval-source-map",
+    "dev:start": "nodemon server/index.js",
+    "dev:server": "webpack serve --mode=development --devtool=eval-source-map",
     "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
   },
   "repository": {
@@ -29,9 +29,11 @@
     "nodemon": "^2.0.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
