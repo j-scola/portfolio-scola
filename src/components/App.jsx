@@ -9,7 +9,7 @@ import Contact from './Contact';
 import sampleData from '../data/workSampleData';
 
 const AppWrapper = styled.div`
-  font-family: 'Lato', 'Roboto', 'Open Sans';
+  font-family: 'Raleway', 'Roboto', 'Open Sans', 'sans-serif';
   background-color: #e7e7e7;
   ${'' /* height: 100vh; */}
   ${'' /* width: 100vw; */}
@@ -31,7 +31,7 @@ const Footer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  box-shadow: 0px -5px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -3px 5px 1px rgba(0, 0, 0, 0.2);
 `;
 
 const App = () => (

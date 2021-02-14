@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import Nav from './Nav';
 
 const Wrap = styled.div`
-  font-family: 'Lato';
-  font-weight: 300;
+  font-family: inherit;
+  font-weight: 400;
   height: 150px;
   width: 100%;
   width: 100%;
@@ -16,7 +16,7 @@ const Wrap = styled.div`
   justify-content: space-between;
   background-color: inherit;
   z-index: 100;
-  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.2);
 `;
 
 const TitleBlock = styled.div`

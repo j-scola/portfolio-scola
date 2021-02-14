@@ -1,9 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Wrap = styled.div`
+  margin: 20px;
+`;
 
 const WorkSample = ({ sample }) => (
-  <div className="workSample">
-    <p>work sample {sample.title}</p>
-  </div>
+  <Wrap className="workSample">
+    <p>{sample.title}</p>
+  </Wrap>
 );
 
 export default WorkSample;
