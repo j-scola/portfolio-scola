@@ -12,8 +12,11 @@ const Wrap = styled.div`
   height: 130px;
   position: fixed;
   display: flex;
-  border-bottom: 2px solid black;
+  ${'' /* border-bottom: 1px solid black; */}
   justify-content: space-between;
+  background-color: inherit;
+  z-index: 100;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.2);
 `;
 
 const TitleBlock = styled.div`

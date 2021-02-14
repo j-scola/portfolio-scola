@@ -11,7 +11,7 @@ import sampleData from '../data/workSampleData';
 const AppWrapper = styled.div`
   font-family: 'Lato', 'Roboto', 'Open Sans';
   background-color: #e7e7e7;
-  height: 100vh;
+  ${'' /* height: 100vh; */}
   ${'' /* width: 100vw; */}
   ${'' /* padding: 10px; */}
   margin: 0px;
@@ -25,17 +25,13 @@ const Content = styled.div`
   width: 100%;
 `;
 const Footer = styled.div`
-  background-color; #e8e8e8;
-`;
-
-const HorizontalList = styled.ul`
+  ${'' /* background-color: #e8e8e8; */}
+  height: 200px;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  list-style-type: none;
-`;
-const HorizontalListItem = styled.li`
-  margin: 0px 20px 0px 20px;
+  width: 100%;
+  box-shadow: 0px -5px 5px 1px rgba(0, 0, 0, 0.2);
 `;
 
 const App = () => (
@@ -55,6 +51,7 @@ const App = () => (
           </Route>
         </Switch>
       </Content>
+      <Footer>Footer</Footer>
     </AppWrapper>
   </Router>
 );
