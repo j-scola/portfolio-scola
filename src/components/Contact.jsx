@@ -1,8 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
-const Wrapper = styled.div``;
 
 const HorizontalList = styled.ul`
   display: flex;
@@ -12,24 +9,20 @@ const HorizontalList = styled.ul`
 `;
 const HorizontalListItem = styled.li`
   margin: 0px 20px 0px 20px;
-  cursor: pointer;
-  color: black;
-  font-style: none;
 `;
 
-const Nav = () => (
-  <Wrapper>
+const Contact = () => (
+  <div>
     <HorizontalList>
       <HorizontalListItem>
-        <Link to="/workSamples">Work Samples</Link>
+        <a href="https://github.com/j-scola">@j-scola on github</a>
       </HorizontalListItem>
       <HorizontalListItem>
-        <Link to="/">About</Link>
-      </HorizontalListItem>
-      <HorizontalListItem>
-        <Link to="/contact">Contact</Link>
+        {' '}
+        <a href="https://linkedin.com/in/james-scolamieri">linkedin profile</a>
       </HorizontalListItem>
     </HorizontalList>
-  </Wrapper>
+  </div>
 );
-export default Nav;
+
+export default Contact;

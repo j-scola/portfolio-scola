@@ -26,13 +26,13 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public/js'),
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    open: true,
-    compress: true,
-    hot: true,
-    port: 9000,
-  },
+  // devServer: {
+  //   contentBase: path.join(__dirname, 'public'),
+  //   open: true,
+  //   compress: true,
+  //   hot: true,
+  //   port: 9000,
+  // },
   plugins: [
     /* ... */
     // https://www.taniarascia.com/how-to-use-webpack/
