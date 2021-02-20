@@ -1,7 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const isProd = false;
+
 module.exports = {
+  mode: isProd ? 'production' : 'development',
   entry: {
     app: './src/index.jsx',
   },
@@ -41,4 +44,5 @@ module.exports = {
     // Only update what has changed on hot reload
     new webpack.HotModuleReplacementPlugin(),
   ],
+  devtool: isProd ? false : 'eval-source-map',
 };
