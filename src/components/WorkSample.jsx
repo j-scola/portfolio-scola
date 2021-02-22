@@ -8,6 +8,9 @@ const Wrap = styled.div`
 const WorkSample = ({ sample }) => (
   <Wrap className="workSample">
     <p>{sample.title}</p>
+    <p>{sample.role}</p>
+    <p>{sample.description}</p>
+    <p>{sample.techstack}</p>
   </Wrap>
 );
 

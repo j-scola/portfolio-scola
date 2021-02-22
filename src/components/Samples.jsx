@@ -46,7 +46,7 @@ const Samples = ({ samples }) => {
   const nextPath = `/work-samples/${
     initId >= samples.length - 1 ? 1 : initId + 2
   }`;
-  const prevPath = `/work-samples/${initId <= 1 ? samples.length : initId}`;
+  const prevPath = `/work-samples/${initId <= 0 ? samples.length : initId}`;
 
   return (
     <Wrap>

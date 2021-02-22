@@ -7,7 +7,6 @@ const data = [
     contribution:
       'Built frontend for public app lanch with Vue and Vuex. Worked with high fidelity designs and generated resource efficient feature development opportunities to maximize success on launch',
     techstack: 'Vue, Vuex, Flask, handrolled CSS',
-    link: '/askaguru',
   },
   {
     id: 2,
@@ -17,7 +16,6 @@ const data = [
     contribution:
       'Built a reservation calendar booking component to dynamically display available dates, potential reservation cost, and nightly pricing.',
     techstack: 'React, MySQL, Node.js, handrolled CSS',
-    link: '/calendar',
   },
   {
     id: 3,
@@ -27,8 +25,17 @@ const data = [
     role: 'Full Stack Engineer',
     contribution:
       'Built frontend for public app lanch with Vue and Vuex. Worked with high fidelity designs and generated resource efficient feature development opportunities to maximize success on launch',
-    techstack: 'Vue, Vuex, Flask, custom CSS',
-    link: '/dinner',
+    techstack: 'React.js, Node.js',
+  },
+  {
+    id: 4,
+    title: 'Rebook',
+    description:
+      'Designed, built and deployed back end system to withstand web scale traffic. Stress tested database, microservices and load balancers to isolate backups and scale horizontally.',
+    role: 'Full Stack Engineer',
+    contribution:
+      'Designed, built and deployed back end system to withstand web scale traffic. Stress tested database, microservices and load balancers to isolate backups and scale horizontally.',
+    techstack: 'Apache Cassandra, AWS EC2, K6, NGINX, Node.js, Loader.io',
   },
 ];
 
