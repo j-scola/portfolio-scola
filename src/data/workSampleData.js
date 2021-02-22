@@ -1,21 +1,26 @@
 const data = [
   {
+    id: 1,
     title: 'AskAGuru',
     description: 'A music streaming and playlist curation app for music lovers',
     role: 'Software Engineer, Launch Team',
     contribution:
       'Built frontend for public app lanch with Vue and Vuex. Worked with high fidelity designs and generated resource efficient feature development opportunities to maximize success on launch',
     techstack: 'Vue, Vuex, Flask, handrolled CSS',
+    link: '/askaguru',
   },
   {
+    id: 2,
     title: 'Couch bnb, calendar component',
     description: 'A vacation rental booking web app',
     role: 'Front-End Engineer',
     contribution:
       'Built a reservation calendar booking component to dynamically display available dates, potential reservation cost, and nightly pricing.',
     techstack: 'React, MySQL, Node.js, handrolled CSS',
+    link: '/calendar',
   },
   {
+    id: 3,
     title: 'Dinner Chooser',
     description:
       'Democratically elected recipies to simplify meal planning for groups',
@@ -23,6 +28,7 @@ const data = [
     contribution:
       'Built frontend for public app lanch with Vue and Vuex. Worked with high fidelity designs and generated resource efficient feature development opportunities to maximize success on launch',
     techstack: 'Vue, Vuex, Flask, custom CSS',
+    link: '/dinner',
   },
 ];
 

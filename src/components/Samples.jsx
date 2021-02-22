@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import leftArrow from '../assets/leftArrow.png';
+import rightArrow from '../assets/rightArrow.png';
+
+import { Link, useParams } from 'react-router-dom';
 
 import WorkSample from './WorkSample';
 
@@ -8,6 +12,7 @@ const Wrap = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 80px;
 `;
 const Previous = styled.div`
   height: 100px;
@@ -30,62 +35,40 @@ const CurrentSampleWidget = styled.div`
   justify-content: center;
   align-items: center;
 `;
+const Arrow = styled.img`
+  height: 50px;
+  width: 50px;
+`;
 
-class Samples extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentSample: 0,
-    };
-  }
+const Samples = ({ samples }) => {
+  const { id } = useParams();
+  const initId = parseInt(id) ? parseInt(id) - 1 : 0;
+  const nextPath = `/work-samples/${
+    initId >= samples.length - 1 ? 1 : initId + 2
+  }`;
+  const prevPath = `/work-samples/${initId <= 1 ? samples.length : initId}`;
 
-  changeSample(newInt, length) {
-    if (newInt < 0) {
-      return this.setState({ currentSample: length - 1 });
-    }
-    if (newInt >= length) {
-      return this.setState({ currentSample: 0 });
-    }
-    return this.setState({ currentSample: newInt });
-  }
-
-  previousSample(int) {
-    this.setState({ currentSample: int - 1 });
-  }
-
-  nextSample(int) {
-    this.setState({ currentSample: int + 1 });
-  }
-
-  render() {
-    const { currentSample } = this.state;
-    const { samples } = this.props;
-    return (
-      <Wrap>
-        <Previous
-          className="arrowUp"
-          onClick={() => this.changeSample(currentSample - 1, samples.length)}
-        >
-          arrow up
+  return (
+    <Wrap>
+      <Link to={prevPath}>
+        <Previous className="arrowUp">
+          <Arrow className="arrow" src={leftArrow} alt="<" />
         </Previous>
-        <CurrentSampleWidget>
-          {/* <div>rendered content {currentSample.toString()}</div> */}
-
-          <WorkSample sample={samples[currentSample]} />
-
-          {/* {samples.map((sample) => (
-            <WorkSample sample={sample} key={Math.random()} />
-          ))} */}
-        </CurrentSampleWidget>
-        <Next
-          className="arrowDown"
-          onClick={() => this.changeSample(currentSample + 1, samples.length)}
-        >
-          arrow down
+      </Link>
+      <CurrentSampleWidget>
+        {id ? (
+          <WorkSample sample={samples[initId]} />
+        ) : (
+          <WorkSample sample={samples[0]} />
+        )}
+      </CurrentSampleWidget>
+      <Link to={nextPath}>
+        <Next className="arrowDown">
+          <Arrow className="arrow" src={rightArrow} alt=">" />
         </Next>
-      </Wrap>
-    );
-  }
-}
+      </Link>
+    </Wrap>
+  );
+};
 
 export default Samples;

@@ -46,7 +46,7 @@ const App = () => (
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/workSamples">
+          <Route path="/work-samples/:id">
             <Samples samples={sampleData} />
           </Route>
         </Switch>
